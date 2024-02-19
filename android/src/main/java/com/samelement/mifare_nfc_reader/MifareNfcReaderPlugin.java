@@ -688,7 +688,6 @@ public class MifareNfcReaderPlugin implements FlutterPlugin, MethodCallHandler {
                     }
                     break;
                 case ACTION_USB_PERMISSION:
-                    Toast.makeText(pluginContext, "Accept this permission request to turn on the reader", Toast.LENGTH_LONG).show();
                     boolean permissionGranted = intent.getBooleanExtra(
                             UsbManager.EXTRA_PERMISSION_GRANTED, false);
 
@@ -703,6 +702,8 @@ public class MifareNfcReaderPlugin implements FlutterPlugin, MethodCallHandler {
                             }
                         }
                     } else {
+                        Toast.makeText(pluginContext, "Accept this permission request to turn on the reader", Toast.LENGTH_LONG).show();
+                    
                         // Handle permission not granted
                         // This could involve notifying the user or taking appropriate actions
                         System.err.println("USB permission not granted");

@@ -675,7 +675,7 @@ public class MifareNfcReaderPlugin implements FlutterPlugin, MethodCallHandler {
 
             switch (action) {
                 case UsbManager.ACTION_USB_DEVICE_ATTACHED:
-                    Toast.makeText(pluginContext, "A USB device is attached", Toast.LENGTH_SHORT).show();
+                    
 
                     UsbDevice device = intent
                             .getParcelableExtra(UsbManager.EXTRA_DEVICE);
@@ -702,7 +702,7 @@ public class MifareNfcReaderPlugin implements FlutterPlugin, MethodCallHandler {
                             }
                         }
                     } else {
-                        Toast.makeText(pluginContext, "Accept this permission request to turn on the reader", Toast.LENGTH_LONG).show();
+                        
                     
                         // Handle permission not granted
                         // This could involve notifying the user or taking appropriate actions
